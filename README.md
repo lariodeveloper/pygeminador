@@ -1,4 +1,13 @@
 # Pygeminador
+<div style="display: inline_block"><br>
+  <img align="center" alt="python" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+</div>
+
+ <a href="https://twitter.com/lariodiniz" target="_blank"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" target="_blank" alt="twitter lario"></a>
+   <a href="https://www.facebook.com/lario.diniz" target="_blank"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" target="_blank" alt="Facebook lario"></a>
+   <a href="https://instagram.com/lariodiniz" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank" alt="instagram lario"></a>
+    <a href="https://www.linkedin.com/in/lariodiniz" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" alt="Linkedin Lário"></a>
+  <a href="https://medium.com/@lariodiniz" target="_blank"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" target="_blank" alt="Medium Lário"></a>
 
 Projeto feito na Imersão IA_ maio 2024
 
@@ -44,7 +53,7 @@ poetry run python main.py
 
 ## Licença
 
-Este projeto esta sobe a licença [MIT](/LICENSE).
+Este projeto esta sobe a licença [![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)](/LICENSE)
 
 ## Versionamento
 O mersionamento do projeto segue o [Semantic Versioning 2.0.0 standard](https://semver.org)
