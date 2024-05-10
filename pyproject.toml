@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pygeminador"
+version = "0.1.0"
+description = "Uma aplicação python com a IA Gemini do Google para ajudar no desenvolvimento de código"
+authors = ["Lário Diniz <lario.developer@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+customtkinter = "^5.2.2"
+google-generativeai = "^0.5.2"
+python-dotenv = "^1.0.1"
+pillow = "^10.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
