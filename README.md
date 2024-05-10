@@ -1,33 +1,10 @@
-<p>
+<p align="center">
  <a href="https://twitter.com/lariodiniz" target="_blank"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" target="_blank" alt="twitter lario"></a>
    <a href="https://www.facebook.com/lario.diniz" target="_blank"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" target="_blank" alt="Facebook lario"></a>
    <a href="https://instagram.com/lariodiniz" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank" alt="instagram lario"></a>
     <a href="https://www.linkedin.com/in/lariodiniz" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" alt="Linkedin Lário"></a>
   <a href="https://medium.com/@lariodiniz" target="_blank"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" target="_blank" alt="Medium Lário"></a>
 
-</p>
-<p align="center">
-    <a href="https://github.com/devicons/devicon/releases">
-        <img alt="GitHub release (latest by semver)" src="https://img.shields.io/github/v/release/devicons/devicon?color=%2360be86&label=Latest%20release&style=for-the-badge&sort=semver">
-    </a>
-    <a href="/LICENSE">
-        <img alt="GitHub" src="https://img.shields.io/github/license/devicons/devicon?color=%2360be86&style=for-the-badge">
-    </a>
-    <a href="https://github.com/devicons/devicon/graphs/contributors">
-        <img alt="GitHub contributors" src="https://img.shields.io/github/contributors-anon/devicons/devicon?color=%2360be86&style=for-the-badge">
-    </a>
-    <a href="https://github.com/devicons/devicon/actions">
-        <img alt="GitHub branch checks state" src="https://img.shields.io/github/checks-status/devicons/devicon/master?color=%2360be86&style=for-the-badge">
-    </a>
-    <a href="https://github.com/devicons/devicon/issues?q=is%3Aopen+is%3Aissue+label%3Arequest%3Aicon">
-        <img alt="GitHub issues by-label" src="https://img.shields.io/github/issues/devicons/devicon/request:icon?color=%2360be86&label=icon%20requests&style=for-the-badge">
-    </a>
-    <a href="https://github.com/devicons/devicon/stargazers">
-        <img alt="GitHub repository stars" src="https://img.shields.io/github/stars/devicons/devicon?color=%2360be86&label=github%20stars&style=for-the-badge">
-    </a>
-    <a href="https://devicon.dev/">
-        <img alt="Registered logos" src="https://img.shields.io/github/directory-file-count/devicons/devicon/icons?color=%2360be86&label=registered%20logos&style=for-the-badge">
-    </a>
 </p>
 
 # Pygeminador
