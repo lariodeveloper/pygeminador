@@ -84,6 +84,3 @@ O icone de pasta foi pasta por [Icon by Freepik](https://www.freepik.com/icon/fo
 
 ## Developer
 Lário Diniz [Entre em contato!](https://www.linkedin.com/in/lariodiniz/)
-
-[![Twitter Badge](https://img.shields.io/badge/-Twitter-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/lariodiniz)](https://twitter.com/lariodiniz)
-[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lariodiniz)](https://www.linkedin.com/in/lariodiniz)
