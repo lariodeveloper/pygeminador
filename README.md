@@ -11,7 +11,18 @@
 
 Projeto feito na Imersão IA_ maio 2024
 
-Uma aplicação python com a IA Gemini do Google para ajudar no desenvolvimento de código
+Uma aplicação python com a IA Gemini do Google para ajudar no desenvolvimento de código.
+
+## Como utilizar
+1 - Abra o **Pygeminador**, clique em **Open your project** e selecione uma pasta de um projeto que você esta desenvolvendo. 
+
+2 - Na tela que abrir selecione um arquivo no explorer a esquerda e clique em **Open File**
+
+3 - Clique em **Improve my code** para o Gemini sugerir melhorias para o seu código.
+
+4 - Clique em **Add Comments** para o Gemini sugerir comentários para o seu código.
+
+5 - Clique em **Save File** para o salvar as mudanças que você fizer na area de texto central.
 
 ## Tecnologias
 
@@ -44,7 +55,7 @@ poetry install
 ```
 Nota: Caso você não esteja usando o poetry utilize o **requeriments.txt**
 
-4. crie um arquivo **.env** na raiz do projeto usando o arquivo **.env_example** como base.
+4. crie um arquivo **.env** na raiz do projeto usando o arquivo **.env_example** como base com a sua chave de acesso ao Gemini.
 
 5. execute o projeto:
 ```
