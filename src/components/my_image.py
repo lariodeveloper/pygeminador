@@ -1,6 +1,7 @@
-from customtkinter import CTkLabel, CTkImage
+from customtkinter import CTkImage, CTkLabel
 
-def my_image(master, image:CTkImage):
+
+def my_image(master, image: CTkImage):
     """Cria um CTkLabel com a imagem fornecida.
 
     Args:
@@ -11,4 +12,3 @@ def my_image(master, image:CTkImage):
         CTkLabel: O CTkLabel criado.
     """
     return CTkLabel(master, image=image)
-    

@@ -1,4 +1,3 @@
-
 def send_chat_gemini(message, chat, callback):
     stream = False
     response = chat.send_message(message, stream=stream)
@@ -12,4 +11,3 @@ def send_chat_gemini(message, chat, callback):
         text = response.text
 
     callback(text, 'FINISH')
-    

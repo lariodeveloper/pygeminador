@@ -1,7 +1,16 @@
-from customtkinter import CTkButton
-from tkinter import NORMAL, DISABLED
+from tkinter import DISABLED, NORMAL
 
-def my_button(master, text: str, onClick, kind: str = 'PRIMARY', width: int = 140, state: str = NORMAL):
+from customtkinter import CTkButton
+
+
+def my_button(
+    master,
+    text: str,
+    onClick,
+    kind: str = 'PRIMARY',
+    width: int = 140,
+    state: str = NORMAL,
+):
     """Cria um botão personalizado com o texto e função onClick fornecidos.
 
     Args:
@@ -18,24 +27,30 @@ def my_button(master, text: str, onClick, kind: str = 'PRIMARY', width: int = 14
 
     # Define a cor e a cor de destaque do botão com base no tipo fornecido.
     if kind == 'DANGER':
-        button_color = "#dc3545"
+        button_color = '#dc3545'
         hover_color = '#ab2322'
     elif kind == 'SUCCESS':
-        button_color = "#28a745"
+        button_color = '#28a745'
         hover_color = '#1e7e34'
     elif kind == 'INFO':
-        button_color = "#17a2b8"
+        button_color = '#17a2b8'
         hover_color = '#138496'
     elif kind == 'WARNING':
-        button_color = "#ffc107"
+        button_color = '#ffc107'
         hover_color = '#e0a800'
     else:  # kind == 'PRIMARY'
-        button_color = "#3273dc"
+        button_color = '#3273dc'
         hover_color = '#285eac'
 
     # Cria o botão
-    button = CTkButton(master, text=text, command=onClick, fg_color=button_color, hover_color=hover_color, width=width, state=state)
+    button = CTkButton(
+        master,
+        text=text,
+        command=onClick,
+        fg_color=button_color,
+        hover_color=hover_color,
+        width=width,
+        state=state,
+    )
 
     return button
-
-
