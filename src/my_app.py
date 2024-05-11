@@ -53,7 +53,7 @@ class MyApp(CTk):
         self.change_page('init_view')
 
     def handlerOpenFolder(self):
-        # Abre uma janela de sele��o de pasta
+        # Abre uma janela de seleção de pasta
         filename = filedialog.askdirectory()
         if filename != '':
             self.paths.project_folder = filename
@@ -102,3 +102,4 @@ class MyApp(CTk):
             )
         else:
             self.toplevel_window.focus()
+

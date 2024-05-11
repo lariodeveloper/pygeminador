@@ -10,8 +10,11 @@ def conf_gemini() -> genai.GenerativeModel:
         'temperature': 1,
     }
 
-    API_KEY = os.environ.get('GEMINI_API_KEY', '')
-    genai.configure(api_key=API_KEY)
+    gemini_api_key = os.environ.get('GEMINI_API_KEY', '')
+    if not gemini_api_key:
+        raise RuntimeError('GEMINI_API_KEY environment variable not set.')
+    
+    genai.configure(api_key=gemini_api_key)
     model = genai.GenerativeModel(
         'gemini-pro', generation_config=generation_config
     )

@@ -32,7 +32,7 @@ class ProjectView(CTkFrame):
             self.code_selected = file_path
             self.file_area.delete('1.0', 'end')
             try:
-                with open(file_path, 'r') as file:
+                with open(file_path, 'r', encoding='utf-8') as file:
                     text = file.read()
                     self.file_area.insert(0.0, text)
                     self.file_area.change_color()
@@ -123,13 +123,13 @@ class ProjectView(CTkFrame):
 
         # Cria o botão para abrir o arquivo
         self.button1 = my_button(
-            self.area0, 'Open File', self.handler_open_file
+            self.areas[0], 'Open File', self.handler_open_file
         )
         self.button1.pack(side=LEFT, padx=10, pady=10)
 
         # Cria o botão para melhorar o código
         self.button2 = my_button(
-            self.area0,
+            self.areas[0],
             'Improve my code',
             self.handler_improve_code,
             state=DISABLED,
@@ -138,7 +138,7 @@ class ProjectView(CTkFrame):
 
         # Cria a barra de progresso
         self.button3 = my_button(
-            self.area0,
+            self.areas[0],
             'Add Comments',
             self.handler_improve_code,
             state=DISABLED,
@@ -146,7 +146,7 @@ class ProjectView(CTkFrame):
         self.button3.pack(side=LEFT, padx=10, pady=10)
 
         self.progress = CTkProgressBar(
-            self.area0, orientation='horizontal', width=1255
+            self.areas[0], orientation='horizontal', width=1255
         )
         self.progress.configure(mode='indeterminate')
 
@@ -154,7 +154,7 @@ class ProjectView(CTkFrame):
         # Função para criar a árvore de diretórios
 
         self.tree = MyDirectoryTree(
-            self.area1,
+            self.areas[1],
             directory=self.app.paths.project_folder,
             app=self.app,
             ignore=ignore,
@@ -179,16 +179,20 @@ class ProjectView(CTkFrame):
 
     def __createTextArea(self):
         # Função para criar a área de texto
-        area1 = CTkFrame(self.area2)
-        area1.pack(fill=BOTH, expand=True, side=LEFT, padx=10, pady=10)
 
-        area2 = CTkFrame(self.area2)
-        area2.pack(fill=BOTH, expand=True, side=RIGHT, padx=10, pady=10)
+        areas = []
+        cont = 0
+        while cont < 2:
+            area = CTkFrame(self.areas[2])
+            area.pack(fill=BOTH, expand=True, side=LEFT, padx=10, pady=10)
+            areas.append(area)
+            cont += 1
+        
 
-        self.file_area = MyCodeTextBox(area1, font=('Arial', 14))
+        self.file_area = MyCodeTextBox(areas[0], font=('Arial', 14))
         self.file_area.pack(expand=True, fill=BOTH)
 
-        area3 = CTkFrame(area1)
+        area3 = CTkFrame(areas[0])
         area3.pack(fill=BOTH, side=BOTTOM, padx=10, pady=10)
 
         # Cria um frame para os botões de salvar
@@ -201,18 +205,21 @@ class ProjectView(CTkFrame):
         )
         self.buttonSave.pack(side=LEFT, padx=10, pady=10)
 
-        self.file_return_area = CTkTextbox(area2, font=('Arial', 14))
+        self.file_return_area = CTkTextbox(areas[1], font=('Arial', 14))
         self.file_return_area.pack(expand=True, fill=BOTH)
 
     def __layout(self):
-        self.area0 = CTkFrame(self)
-        self.area0.pack(side=TOP, fill=BOTH)
+        self.areas = []
+        cont = 0
+        while cont < 3:
+            area = CTkFrame(self)
+            self.areas.append(area)
+            cont +=1
+
+        self.areas[0].pack(side=TOP, fill=BOTH)
+        self.areas[1].pack(side=LEFT, fill=BOTH)
+        self.areas[2].pack(expand=True, fill=BOTH)
+
         self.__createTopArea()
-
-        self.area1 = CTkFrame(self)
-        self.area1.pack(side=LEFT, fill=BOTH)
         self.__createTreeView()
-
-        self.area2 = CTkFrame(self)
-        self.area2.pack(expand=True, fill=BOTH)
         self.__createTextArea()
