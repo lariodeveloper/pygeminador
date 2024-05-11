@@ -1,15 +1,24 @@
 import os
 import re
-from tkinter import BOTH, BOTTOM, DISABLED, LEFT, NORMAL, RIGHT, TOP
+from tkinter import END
 
 from customtkinter import CTkFrame, CTkLabel, CTkTextbox
 
 from src.components.my_button import my_button
 
 TAGS = {
-    'for': 'blue',
-    'def': 'red',
-    'from': '#43026b',
+    'python': {
+        'for ': 'blue',
+        'def ': 'red',
+        'from ': '#470146',
+        'if ': '#470146',
+        'else': '#470146',
+        'try ': '#470146',
+        'import ': '#470146',
+        'class ': '#0a41f5',
+
+    }
+    
 }
 
 
@@ -21,25 +30,34 @@ class MyCodeTextBox(CTkTextbox):
             *args, **kwargs, fg_color='#e6e3da', text_color='black'
         )
         self.bind('<KeyRelease>', self.change_color)
-        for tag in TAGS:
-            self.tag_config(tag, foreground=TAGS[tag])
+        self.language = 'python'
+        self.config_tags()
 
-    def change_color(self, key=None):
-        # Obt�m o texto da caixa de texto
-        text = self.get('1.0', 'end')
+    def config_tags(self):
+        tags = TAGS[self.language]
+        for tag in tags:
+            self.tag_config(tag, foreground=tags[tag])
 
-        # Encontra as ocorr�ncias de palavras-chave usando express�es regulares
-        matches = re.finditer(
-            r'\b({})\s+|'.format('|'.join(TAGS.keys())), text
-        )
 
+    def search_re(self, pattern):
+
+        matches = []
+        text = self.get("1.0", END).splitlines()
+        for i, line in enumerate(text):
+            for match in re.finditer(pattern, line):
+                matches.append((f"{i + 1}.{match.start()}", f"{i + 1}.{match.end()}"))
+        
+        return matches
+    
+    def change_color(self):
+        tags = TAGS[self.language]
+        
         # Remove todas as tags de realce existentes
-        self.tag_remove(
-            self, '1.0', 'end'
-        )  # Clear all existing tags efficiently
+        self.tag_remove(self, '1.0', END) 
+        
+        # Obtem texto
+        text = self.get('1.0', 'end')
+        for tag in tags:
+            for match in self.search_re(tag):
+                self.tag_add(tag, match[0], match[1])
 
-        # Aplica as tags de realce correspondentes �s ocorr�ncias de palavras-chave
-        # for match in matches:
-        # start, end = str(match.start()), str(match.end())
-        # print(f"Match: {text[int(start):int(end)]}, Start: {start}, End: {end}")  # Added debugging print
-        # self.tag_add(TAGS[match.group(1)], start, end)
